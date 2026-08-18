@@ -1,5 +1,10 @@
+.venv/
 build/
-zmk/
+zephyr/
 modules/
-tools/
+*.elf
+*.hex
+*.uf2
 .west/
+zmk/
+zmk-*/
