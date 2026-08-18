@@ -2,8 +2,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: mctechnology17
-      url-base: https://github.com/mctechnology17
+    - name: jkcousart
+      url-base: https://github.com/jkcousart
     - name: eyelash
       url-base: https://github.com/a741725193
     - name: cormoran
@@ -29,7 +29,7 @@ manifest:
       remote: cormoran
       revision: zmk-v0.3.0.0
     - name: zmk-nice-oled
-      remote: mctechnology17
+      remote: jkcousart
       revision: main
     - name: zmk-board-eyelash
       remote: eyelash
