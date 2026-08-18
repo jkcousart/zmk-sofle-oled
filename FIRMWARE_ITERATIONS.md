@@ -72,3 +72,43 @@ Only these working branches are intended to remain:
 - `happy-cat-oled`: future cat-animation testing
 
 The removed experiment branches were `custom-firmware-dev`, `latency-tuning-v1`, `stable-v4-baseline`, and `stable-oled-latency-v1`. Their meaningful checkpoints remain recoverable through the tags and commit IDs listed above.
+
+## Performance v2 - Split BLE Queue Increase
+
+Date:
+2026-08-18
+
+Branch:
+sofle-performance-v1
+
+Change:
+
+Increased split BLE event buffering:
+
+Before:
+- Central position queue: 16
+- Central split run queue: 16
+- Peripheral position queue: 16
+
+After:
+- Central position queue: 32
+- Central split run queue: 32
+- Peripheral position queue: 32
+
+Files changed:
+- boards/shields/eyelash_sofle/eyelash_sofle_left.conf
+- boards/shields/eyelash_sofle/eyelash_sofle_right.conf
+
+Validation:
+- BLE timing unchanged
+- Debounce unchanged at 2ms
+- OLED unchanged
+- Both halves built successfully
+
+Observed result:
+- Improved typing consistency
+- Smoother fast typing bursts
+- No stability regression observed
+
+Checkpoint:
+sofle-performance-v2-checkpoint
