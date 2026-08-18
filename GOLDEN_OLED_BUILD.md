@@ -36,3 +36,21 @@ eyelash_sofle.dtsi
  -> ZMK display subsystem
  -> nice_oled widgets
  -> OLED output
+
+## Right side verified
+
+Working build:
+
+west build \
+  -s zmk/app \
+  -b eyelash_nano \
+  -d build/seller_right \
+  -- \
+  -DBOARD_ROOT=$PWD \
+  -DZMK_CONFIG=$PWD/config \
+  -DSHIELD="eyelash_sofle_right nice_oled"
+
+Result:
+- Build successful
+- OLED shield enabled
+- UF2 generated
